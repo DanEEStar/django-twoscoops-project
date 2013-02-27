@@ -32,5 +32,6 @@ class VagrantEnv(EnvTask):
         env.debug = True
         env.puppet_temp_dir = '/home/vagrant/puppettmp'
         env.puppet_dir = '/home/vagrant/puppet'
+        env.requirements_file = 'requirements/base.txt'
 
 test_local_env = VagrantEnv()
