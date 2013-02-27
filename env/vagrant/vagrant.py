@@ -9,8 +9,8 @@
 # @author: Daniel Egger <daniel.egger@gmail.com>
 
 from fabric.api import env
-from iteration.fabric.servicebase import UwsgiService, NginxService, CeleryService
-from iteration.fabric.environments import EnvTask
+from deployit.fabrichelper.servicebase import UwsgiService, NginxService, CeleryService
+from deployit.fabrichelper.environments import EnvTask
 
 class VagrantEnv(EnvTask):
     """

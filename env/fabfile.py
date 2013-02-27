@@ -15,4 +15,4 @@ env.rsync_exclude.remove('*.dat')
 env.rsync_exclude = env.rsync_exclude + ['media/']
 
 
-from iteration.fabric.common import *
+from deployit.fabrichelper.common import *
