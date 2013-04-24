@@ -9,4 +9,4 @@ Sphinx==1.1.3
 -e git://github.com/iterativ/djangojames.git#egg=djangojames
 
 # used for the deployment helpers
--e git://github.com/DanEEStar/deployit.git#egg=deployit
+-e git://github.com/iterativ/deployit.git#egg=deployit
