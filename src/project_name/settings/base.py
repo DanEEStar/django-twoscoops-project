@@ -153,11 +153,12 @@ TEMPLATE_DIRS = (
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#middleware-classes
 MIDDLEWARE_CLASSES = (
     # Default Django middleware.
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 ########## END MIDDLEWARE CONFIGURATION
 
@@ -171,24 +172,21 @@ ROOT_URLCONF = '%s.urls' % SITE_NAME
 ########## APP CONFIGURATION
 DJANGO_APPS = (
     # Default Django apps:
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     # Useful template tags:
     # 'django.contrib.humanize',
-
-    # Admin panel and documentation:
-    'django.contrib.admin',
-    # 'django.contrib.admindocs',
 )
 
 THIRD_PARTY_APPS = (
     # Database migration helpers:
     'south',
+    'django_extensions',
+    'djangojames',
 )
 
 # Apps specific for this project go here.
@@ -237,7 +235,16 @@ FIXTURE_DIRS = (
     join(PROJECT_ROOT, 'external_fixtures/'),
 )
 
-########## WSGI CONFIGURATION
-# See: https://docs.djangoproject.com/en/dev/ref/settings/#wsgi-application
-#WSGI_APPLICATION = 'wsgi.application'
-########## END WSGI CONFIGURATION
+
+# Internationalization
+# https://docs.djangoproject.com/en/1.6/topics/i18n/
+
+LANGUAGE_CODE = 'de'
+
+TIME_ZONE = 'UTC'
+
+USE_I18N = True
+
+USE_L10N = True
+
+USE_TZ = True
