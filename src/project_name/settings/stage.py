@@ -1,3 +1,7 @@
+from base import *
+
+ALLOWED_HOSTS = ['{{ project_name }}.gurten.iterativ.ch']
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
