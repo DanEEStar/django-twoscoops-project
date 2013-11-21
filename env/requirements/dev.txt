@@ -1,10 +1,10 @@
 # Local development dependencies go here
 -r base.txt
-django-discover-runner==1.0
 django-debug-toolbar==0.9.4
 
 # used for management commands
 -e git://github.com/iterativ/djangojames.git#egg=djangojames
 
 # used for the deployment helpers
--e git://github.com/iterativ/deployit.git#egg=deployit
+-e git://github.com/iterativ/deployit.git@ubuntu1204#egg=deployit
+
