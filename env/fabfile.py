@@ -9,6 +9,7 @@
 # @author: Daniel Egger <daniel.egger@gmail.com>, Daniel Egger <daniel.egger@gmail.com>
 
 from fabric.api import env
+from stage.stage import *
 from vagrant.vagrant import *
 
 env.rsync_exclude.remove('*.dat')
