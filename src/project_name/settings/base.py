@@ -4,6 +4,9 @@
 from os.path import abspath, basename, dirname, join, normpath
 from sys import path
 
+import djcelery
+djcelery.setup_loader()
+
 
 ########## PATH CONFIGURATION
 # Absolute filesystem path to the Django project directory:
@@ -43,27 +46,12 @@ MANAGERS = ADMINS
 ########## END MANAGER CONFIGURATION
 
 
-########## DATABASE CONFIGURATION
-# See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-    }
-}
-########## END DATABASE CONFIGURATION
-
-
 ########## GENERAL CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#time-zone
-TIME_ZONE = 'America/Los_Angeles'
+TIME_ZONE = 'Europe/Zurich'
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#language-code
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'de'
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#site-id
 SITE_ID = 1
@@ -90,14 +78,14 @@ MEDIA_URL = '/media/'
 
 ########## STATIC FILE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-root
-STATIC_ROOT = normpath(join(PROJECT_ROOT, 'assets'))
+STATIC_ROOT = normpath(join(PROJECT_ROOT, 'static'))
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
 STATIC_URL = '/static/'
 
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
 STATICFILES_DIRS = (
-    normpath(join(SITE_ROOT, 'static')),
+    #normpath(join(SITE_ROOT, 'static')),
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
@@ -186,6 +174,7 @@ THIRD_PARTY_APPS = (
     # Database migration helpers:
     'south',
     'django_extensions',
+    'djcelery',
     'djangojames',
 )
 
