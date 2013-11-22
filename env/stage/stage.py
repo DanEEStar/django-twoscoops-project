@@ -28,7 +28,7 @@ class StageEnv(EnvTask):
         env.server_names = ['{{ project_name }}.gurten.iterativ.ch']
         env.settings_module = '{{ project_name }}.settings.stage'
         env.nginx_no_follow = True
-        env.requirements_file = 'requirements/production.txt'
+        env.requirements_file = 'requirements/dev.txt'
         env.puppet_branch_name = 'ubuntu1204'
 
 
