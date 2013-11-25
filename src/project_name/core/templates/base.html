@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{% templatetag openblock %} block title {% templatetag closeblock %}{{ project_name }}{% templatetag
-        openblock %} endblock title {% templatetag closeblock %}</title>
+    <title>{% templatetag openblock %} block title {% templatetag closeblock %}
+        {{ project_name }}
+        {% templatetag openblock %} endblock title {% templatetag closeblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -30,8 +31,8 @@
 
     <!-- Use this to quickly test CSS changes in a template, 
         then move to project.css -->
-    {% templatetag openblock %} block extra_css {% templatetag closeblock %}{% templatetag openblock %} endblock
-    extra_css {% templatetag closeblock %}
+    {% templatetag openblock %} block extra_css {% templatetag closeblock %}
+    {% templatetag openblock %} endblock extra_css {% templatetag closeblock %}
 </head>
 
 <body>
@@ -75,8 +76,9 @@
         </div>
     </noscript>
 
-    <h1>{% templatetag openblock %} block page_title {% templatetag closeblock %}Example Base Template{% templatetag
-        openblock %} endblock page_title {% templatetag closeblock %}</h1>
+    <h1>{% templatetag openblock %} block page_title {% templatetag closeblock %}
+        Example Base Template
+        {% templatetag openblock %} endblock page_title {% templatetag closeblock %}</h1>
 
     {% templatetag openblock %} block content {% templatetag closeblock %}
     <p>Use this document as a way to quick start any new project.</p>
@@ -94,7 +96,7 @@
 <!-- place project specific Javascript in this file -->
 <script src="{% templatetag openvariable %} STATIC_URL {% templatetag closevariable %}js/project.js"></script>
 
-{% templatetag openblock %} block extra_js {% templatetag closeblock %}{% templatetag openblock %} endblock extra_js {%
-templatetag closeblock %}
+{% templatetag openblock %} block extra_js {% templatetag closeblock %}
+{% templatetag openblock %} endblock extra_js {%templatetag closeblock %}
 </body>
 </html>
