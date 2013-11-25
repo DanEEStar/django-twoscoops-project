@@ -8,7 +8,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', TemplateView.as_view(template_name='base.html')),
-
+    url(r'^500/$', TemplateView.as_view(template_name='500.html')),
+    url(r'^404/$', TemplateView.as_view(template_name='404.html')),
     # Examples:
     # url(r'^$', 'blabla.views.home', name='home'),
     # url(r'^blabla/', include('blabla.foo.urls')),

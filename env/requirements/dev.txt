@@ -5,3 +5,6 @@ django-debug-toolbar==0.11.0
 # used for the deployment helpers
 -e git://github.com/iterativ/deployit.git@ubuntu1204#egg=deployit
 
+# testing and dummy data
+factory_boy==2.0.2
+-e git://github.com/iterativ/randomworld.git#egg=randomworld
