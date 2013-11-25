@@ -75,6 +75,20 @@
             <a href="http://www.enable-javascript.com/de/" target="_blank">hier</a>.
         </div>
     </noscript>
+    {% templatetag openblock  %} if messages {% templatetag closeblock %}
+    <div class="row">
+        <div class="span12">
+            {% templatetag openblock  %} for message in messages {% templatetag closeblock %}
+            <div class="alert
+            {% templatetag openblock  %} if message.tags {% templatetag closeblock %}
+            alert-{% templatetag openvariable %}message.tags{% templatetag closevariable %}
+            {% templatetag openblock  %} templatetag openblock {% templatetag closeblock %} endif {% templatetag closeblock %}">
+                {% templatetag openvariable %} message {% templatetag closevariable %}
+            </div>
+            {% templatetag openblock  %} endfor {% templatetag closeblock %}
+        </div>
+    </div>
+    {% templatetag openblock  %} endif {% templatetag closeblock %}
 
     <h1>{% templatetag openblock %} block page_title {% templatetag closeblock %}
         Example Base Template
