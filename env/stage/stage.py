@@ -9,7 +9,7 @@
 # @author: maersu <me@maersu.ch>
 
 from fabric.api import env
-from deployit.fabrichelper.servicebase import UwsgiService, NginxService, CeleryService
+from deployit.fabrichelper.servicebase import UwsgiService, NginxService, CeleryService, NewReclicService
 from deployit.fabrichelper.environments import EnvTask
 
 
@@ -22,7 +22,7 @@ class StageEnv(EnvTask):
     def run(self):
         env.hosts = ['gurten.iterativ.ch']
         env.env_name = 'stage'
-        env.services = [UwsgiService, NginxService, CeleryService]
+        env.services = [UwsgiService, NginxService, CeleryService, NewReclicService]
         env.project_name = '{{ project_name }}'
         env.remote_virtualenv = '/srv/www/{{ project_name }}/stage/{{ project_name }}-env'
         env.server_names = ['{{ project_name }}.gurten.iterativ.ch']
@@ -30,6 +30,10 @@ class StageEnv(EnvTask):
         env.nginx_no_follow = True
         env.requirements_file = 'requirements/dev.txt'
         env.puppet_branch_name = 'ubuntu1204'
+        #env.newrelic_key = ''
+        #env.not_allowed_tasks = ['resetload', 'delete']
+        #env.newrelic_application_id = ''
+        #env.newrelic_x_api_key = ''
 
 
 stage_env = StageEnv()

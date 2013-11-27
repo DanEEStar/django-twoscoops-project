@@ -111,7 +111,16 @@
 <script src="{% templatetag openvariable %} STATIC_URL {% templatetag closevariable %}js/bootstrap.min.js"></script>
 <!-- place project specific Javascript in this file -->
 <script src="{% templatetag openvariable %} STATIC_URL {% templatetag closevariable %}js/project.js"></script>
+<script src="{% templatetag openvariable %} STATIC_URL {% templatetag closevariable %}js/raven.min.js"></script>
 {% templatetag openblock %} endcompress {% templatetag closeblock %}
+{% templatetag openblock %} if RAVEN_JS {% templatetag closeblock %}
+    <script>
+    Raven.config('{% templatetag openvariable %} RAVEN_JS {% templatetag closevariable %}', {
+        whitelistUrls: [/iterativ\.ch/]
+    }).install();
+    </script>
+{% templatetag openblock %} endif {% templatetag closeblock %}
+
 
 {% templatetag openblock %} block extra_js {% templatetag closeblock %}
 {% templatetag openblock %} endblock extra_js {%templatetag closeblock %}

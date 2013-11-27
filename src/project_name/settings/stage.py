@@ -14,6 +14,16 @@ DATABASES = {
     }
 }
 
+RAVEN_CONFIG = {
+    'dsn': '',
+}
+
+RAVEN_JS = ''
+
+
+INSTALLED_APPS = INSTALLED_APPS + (
+    'raven.contrib.django.raven_compat',
+)
 
 LOGGING = {
     'version': 1,
