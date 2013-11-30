@@ -123,7 +123,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
     'django.core.context_processors.request',
-    "{{ project_name }}.core.context_processors.extra_context",
+    "{{ project_name }}.apps.core.context_processors.extra_context",
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-loaders
@@ -183,7 +183,7 @@ THIRD_PARTY_APPS = (
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
-    '{{ project_name }}.core',
+    '{{ project_name }}.apps.core',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

@@ -8,15 +8,9 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', TemplateView.as_view(template_name='base.html')),
     url(r'^500/$', TemplateView.as_view(template_name='500.html')),
     url(r'^404/$', TemplateView.as_view(template_name='404.html')),
-    # Examples:
-    # url(r'^$', 'blabla.views.home', name='home'),
-    # url(r'^blabla/', include('blabla.foo.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^', include('{{ project_name }}.apps.core.urls')),
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/raise_error/$', 'djangojames.admin.raise_error'), # raise an exception to see if error handling works
