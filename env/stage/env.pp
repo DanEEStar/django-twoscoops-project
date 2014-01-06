@@ -39,7 +39,7 @@ rabbitmq::user { 'guest':
 }
 
 # clean up django session
-cron { django_clearsessions:
+cron { django_clearsessions_stage:
   command => "/srv/www/{{ project_name }}/stage/{{ project_name }}-env/bin/python /srv/www/{{ project_name }}/stage/manage.py clearsessions",
   user    => root,
   hour    => 2,
