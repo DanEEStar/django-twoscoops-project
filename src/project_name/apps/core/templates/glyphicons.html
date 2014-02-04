@@ -274,12 +274,6 @@ p, .halflings {
 <link rel="stylesheet"
       href="{% templatetag openvariable %} STATIC_URL {% templatetag closevariable %}glyphicons/css/filetypes.css">
 
-<script>
-  $(function () {
-    $('#myTab a:last').tab('show')
-  })
-</script>
-
 {% templatetag openblock %} endblock extra_css {% templatetag closeblock %}
 
 {% templatetag openblock %} block content {% templatetag closeblock %}
@@ -5500,3 +5494,13 @@ p, .halflings {
 </div>
 </div>
 {% templatetag openblock %} endblock content {% templatetag closeblock %}
+
+{% templatetag openblock %} block extra_js {% templatetag closeblock %}
+
+<script>
+  $(function () {
+    $('#myTab a:first').tab('show')
+  })
+</script>
+
+{% templatetag openblock %} endblock extra_js {%templatetag closeblock %}
