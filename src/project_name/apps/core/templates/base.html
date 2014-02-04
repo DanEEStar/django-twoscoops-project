@@ -51,14 +51,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">{{ project_name }}</a>
+      <a class="navbar-brand" href="/">{{ project_name }}</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/glyphicons/">Glyphicons</a></li>
+        <li><a href="/">Link</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div>
@@ -94,11 +94,9 @@
     </div>
     {% templatetag openblock  %} endif {% templatetag closeblock %}
 
-    <h1>{% templatetag openblock %} block page_title {% templatetag closeblock %}
-        Example Base Template
-        {% templatetag openblock %} endblock page_title {% templatetag closeblock %}</h1>
-
     {% templatetag openblock %} block content {% templatetag closeblock %}
+    <h1>Example Base Template</h1>
+
     <p>Use this document as a way to quick start any new project.</p>
     {% templatetag openblock %} endblock content {% templatetag closeblock %}
 
