@@ -64,7 +64,7 @@
 
 <div class="container">
 
-    <!--[if lt IE 8]>
+    <!--[if lt IE 9]>
     <div class="alert alert-error">
         Sie benutzen einen <strong>veralteten</strong> Browser.
         Bitte <a href="http://browsehappy.com/">installieren Sie eine neuere Version</a> oder
@@ -85,7 +85,7 @@
             <div class="alert
             {% templatetag openblock  %} if message.tags {% templatetag closeblock %}
             alert-{% templatetag openvariable %}message.tags{% templatetag closevariable %}
-            {% templatetag openblock  %} templatetag openblock {% templatetag closeblock %} endif {% templatetag closeblock %}">
+            {% templatetag openblock  %} endif {% templatetag closeblock %}">
                 {% templatetag openvariable %} message {% templatetag closevariable %}
             </div>
             {% templatetag openblock  %} endfor {% templatetag closeblock %}
