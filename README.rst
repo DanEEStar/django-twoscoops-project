@@ -19,12 +19,16 @@ Creating your project
 =====================
 
 To create a new Django project called '**icecream**' using
-django-project-template, run the following command::
+django-project-template, run the following command:
 
     $ django-admin.py startproject --template=https://github.com/iterativ/django-project-template/zipball/master --extension=py,rst,html,rb,pp,json --name=Vagrantfile icecream
 
+Create virtual env
+
+    $ virtualenv --no-site-packages icecream-env
+
 Installation of Dependencies
-=============================
+============================
 
 Depending on where you are installing dependencies:
 
@@ -38,3 +42,10 @@ For production::
 
 *note: We install production requirements this way because many Platforms as a
 Services expect a requirements.txt file in the root of projects.*
+
+Initialize Database
+===================
+
+Create all tables an load a admin user (admin, test)
+
+    $ python manage.py resetload
