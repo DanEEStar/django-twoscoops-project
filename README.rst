@@ -2,6 +2,22 @@
 django-twoscoops-project
 ========================
 
+Newer versions
+==============
+
+Please take a look at 
+
+https://github.com/iterativ/cookiecutter-simple-django
+
+or
+
+https://github.com/iterativ/cookiecutter-simple-django-spa
+
+which does the same
+
+
+
+
 A project template for Django 1.5.
 
 To use this project follow these steps:
